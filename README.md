@@ -1,6 +1,6 @@
 # BOOSTreveng
 
-Documenting my findings on reverse engineering the LEGO BOOST Hub.
+Documenting my findings on reverse engineering the LEGO BOOST Move Hub.
 My main interest is using Linux (MINDSTORMS EV3 with ev3dev) but this information might be usefull to everybody.
 
 DISCLAIMER:
@@ -11,3 +11,7 @@ Method:
 I'm using an ubertooth BLE sniffer, on my Ubuntu laptop. Installed LEGO BOOST Hub on my Android phone (Huawey P8, not supported but it works, just need to get the full APK+OBB).
 
 It's not easy to get consistent results. I'm using Wireshark and a filter for ATT protocol ("btl2cap.cid==0x004"). Have to try several times until I capture something - it seems that restarting Bluetooth on Android and restarting App helps. Also disabling my laptop internal BT and not running heavy programs seems to help.
+
+Progress so far:
+- RGB LED color control
+- Motor A and B speed/timed control
