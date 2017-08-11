@@ -1,0 +1,29 @@
+Motors
+
+motor A 50% 0.1s
+0c:00:81:37:11:09:64:00:32:64:7f:03
+
+gatttool -b 00:16:53:A4:CD:7E --char-write-req --handle=0x0e --value=0c0081371109640032647f03
+
+motor A 100% 0.1s
+0c:00:81:37:11:09:64:00:64:64:7f:03
+
+motor B 50% 0.1s
+0c:00:81:38:11:09:64:00:32:64:7f:03
+
+motor B 50% 0.2s
+0c:00:81:38:11:09:c8:00:32:64:7f:03
+
+So...
+
+4th byte is motor:
+A = 37
+B = 38
+
+7h byte is timing:
+0.1s = 64
+0.s2 = c8
+
+9th byte is duty cycle:
+ 50% = 32
+100% = 64
