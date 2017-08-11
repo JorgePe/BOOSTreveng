@@ -51,9 +51,15 @@ First 3 bytes specify the command:
 Run Motor A at x duty cycle for y time = 0c:00:81
 
 4th byte specify the motors affected:
-A = 37
-B = 38
-C = 36 (confirmed)
-D = ??
+  A = 37
+  B = 38
+  C = 01 (but 36 also confirmed)
+  D = ??
+A+B = 39
+
+C 50 360º
+0e:00:81:01:11:0b:68:01:00:00:32:64:7f:03
+
+
 
 
