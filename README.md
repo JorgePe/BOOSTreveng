@@ -22,4 +22,5 @@ It's not easy to get consistent results. I'm using Wireshark and a filter for AT
 
 Progress so far:
 - RGB LED color control
-- Motor A and B speed/timed control
+- Motors (A, B, A+B, C, D) speed/timed control (also angle control but not complete yet)
+- A bash script with a short example on how to control motors (soon also in python)
