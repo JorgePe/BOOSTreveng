@@ -28,7 +28,7 @@ B = 38
 
 64h = 100d
 c8h = 200d
-So time is in miliseconds
+So time is in mil 647f03liseconds
 00 0A = 2560 = 2.56 seconds
 00 0F = 3.84 seconds
 
@@ -54,12 +54,26 @@ Run Motor A at x duty cycle for y time = 0c:00:81
   A = 37
   B = 38
   C = 01 (but 36 also confirmed)
-  D = ??
+  D = 02
 A+B = 39
 
+Not sure yet:
+C 50 0.1
+0c:00:81:01:11:09:64:00:32:64:7f:03
 C 50 360º
 0e:00:81:01:11:0b:68:01:00:00:32:64:7f:03
+D 50 360º
+0e:00:81:02:11:0b:68:01:00:00:32:64:7f:03
 
+0c0081 and 0e0081 seem to do the same and sometime it appears one or the other
+I think motor command may change (increase first byte?) as I switch configuration (like swap motor)-
 
+68:01 = 360º (LSB + MSB)
 
+0c0081 M 11 09 T DT 647f03 = Turn motor M with duty cycle DT for T milliseconds 
+0c0081 M 11 0b DEG 0000 DT 647f03 = Rotate motor M DEG degrees with duty cycle DT
 
+5A 00 = 90º
+B4 00 = 180º
+0E 01 = 270º
+68 01 = 360º
