@@ -1,6 +1,7 @@
 General GATT findings:
 
 Firmware as of 11 August 2017
+App version 1.0.11 / Firmware: 1.0.00.0140
 
 gatttool -I -b 00:16:53:A4:CD:7E
 
