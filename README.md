@@ -2,18 +2,15 @@
 
 Documenting my findings on reverse engineering the LEGO BOOST Move Hub.
 
-My main interest is using Linux (MINDSTORMS EV3 with ev3dev) but this information
-might be usefull to everybody.
+My main interest is using Linux (MINDSTORMS EV3 with ev3dev) but this information might be usefull to everybody.
 
-In Linux (Ubuntu) I usually use the gatttool command (from bluez 5) for simple bash
-scripts and pybluez (or just gattlib, https://bitbucket.org/OscarAcena/pygattlib)
-for python scripts. Usually same scripts run fine on ev3dev but since bluez, pybluez
+In Linux (Ubuntu) I usually use the gatttool command (from bluez 5) for simple bash scripts and pybluez (or just gattlib, https://bitbucket.org/OscarAcena/pygattlib) for python scripts. Usually same scripts run fine on ev3dev but since bluez, pybluez
 and the linux kernel are a bit bewind Ubuntu sometimes I need to call gatttool from python.
 
 You should also see this project that implements a swift App for iOS:
 https://github.com/bricklife/BoostRemote
 
-DISCLAIMER:
+**DISCLAIMER:**
 LEGO and BOOST are Trademarks from The LEGO Company, which doesn not support (probably even know about) this project.
 And of course I'm not responsible for any damage on your LEGO BOOST Hub.
 
