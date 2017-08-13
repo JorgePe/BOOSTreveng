@@ -24,3 +24,6 @@ Progress so far:
 - RGB LED color control
 - Motors (A, B, A+B, C, D) speed/timed control (also angle control but not complete yet)
 - A bash script with a short example on how to control motors (soon also in python)
+
+Issues:
+- although gatttool works fine, I'm having problems with gattlib
