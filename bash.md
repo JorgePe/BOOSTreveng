@@ -87,8 +87,8 @@ gatttool -i hci0 -b 00:16:53:A4:CD:7E  --char-read --handle=0x07
 Characteristic value/descriptor: 4c 45 47 4f 20 4d 6f 76 65 20 48 75 62
 ```
 
-The result is a string of hexadecimal chars, if we [convert it to ASCII](http://www.rapidtables.com/convert/number/hex-to-ascii.htm) we'll get
-
+The result is a string of hexadecimal chars, you can convert it to ASCII from command line with
 ```
-LEGO Move Hub
+echo 4c 45 47 4f 20 4d 6f 76 65 20 48 75 62 | perl -ne 's/([0-9a-f]{2})/print chr hex $1/gie'
 ```
+or use an [online tool](http://www.rapidtables.com/convert/number/hex-to-ascii.htm) instead.
