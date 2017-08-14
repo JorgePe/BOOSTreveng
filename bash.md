@@ -1,14 +1,18 @@
 # Using linux with BLE
 
 Modern linux distributions use [BlueZ](http://www.bluez.org/) for its bluetooth stack.
+
 Bluez 5 include support for BLE devices and we can use just some simple command line commands to access our BOOST Move Hub.
+
 
 These guidelines should work on a common linux computer (I use an Ubuntu laptop) but also on a Raspberry Pi running Raspbian (as long as it includes BlueZ 5) and LEGO MINDSTORMS EV3 running ev3dev.
 
+
 Of course, we neeed our computer/Raspberry Pi/ EV3 to be BT BLE compatible. Many modern computers already have some kind of BT 4.0 internal device. The Raspberry Pi 3 and Pi Zero W also include BT 4.0 BLE but older versions and also the EV3 don't so we need to use an USB adapter.
 
-If we do have a BT BLE compatible device it should appear in linux as an HCI device, version 4.0 or above:
 
+If we do have a BT BLE compatible device it should appear in linux as an HCI device, version 4.0 or above:
+```
 hciconfig -a
 hci0:	Type: Primary  Bus: USB
 	BD Address: 34:F3:9A:88:60:7A  ACL MTU: 1021:4  SCO MTU: 96:6
@@ -26,9 +30,11 @@ hci0:	Type: Primary  Bus: USB
 	HCI Version: 4.2 (0x8)  Revision: 0x100
 	LMP Version: 4.2 (0x8)  Subversion: 0x100
 	Manufacturer: Intel Corp. (2)
+```
 
 Please note that not all BT 4.0 devices are BLE - recently LEGO changed the internal Bluetooth chipset of the MINDSTORMS EV3 for a BT 4.0 version whithout BLE. You can check that with:
 
+```
 sudo hciconfig -a hci0 lestates
 Supported link layer states:
 	YES Non-connectable Advertising State
@@ -60,13 +66,16 @@ Supported link layer states:
 	YES Passive Scanning State and Slave Role combination
 	YES Active Scanning State and Slave Role combination
 	YES Initiating State and Master Role combination/Master Role and Master Role combination
+```
 
 To use our LEGO BOOST Move Hub we need to know its BT address. We just turn it on and scan for BLE devices near us:
 
+```
 sudo hcitool -i hci0 lescan
 LE Scan ...
 00:1E:C0:3F:D9:DC (unknown)
 00:16:53:A4:CD:7E (unknown)
 00:16:53:A4:CD:7E LEGO Move Hub
+```
 
 '00:16:53:A4:CD:7E' is the BT address, 'LEGO Move Hub' is the friendly name (with current firmware, it's the same friendly name for all devices so if you have more than one you should turn just one on, take note of it's BT address, then turn it off and repeat the process...)
