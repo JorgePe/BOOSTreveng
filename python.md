@@ -1,6 +1,8 @@
 Using python with BT BLE
 
-Note: this guidelines are only for linux
+Note 1: this guidelines are only for linux.
+Note 2: we need a BLE compatible system. Please read [bash.md](https://github.com/JorgePe/BOOSTreveng/blob/master/bash.md)
+
 
 I use [Oscar Acena gattlib (pygattlib)](https://bitbucket.org/OscarAcena/pygattlib)
 This library is also included in [Piotr Karulis pybluez](https://github.com/karulis/pybluez).
@@ -8,80 +10,6 @@ Both libraries are included in ev3dev so we can use a LEGO MINDSTORMS EV3 to com
 Of course, a BT BLE compatible device is needed, there are several USB dongles available.
 
 For the record, there is at least another library available, [Ian Harvey bluepy](https://github.com/IanHarvey/bluepy).
-
-If you have a BT BLE compatible device it should appear in linux as an HCI device, version 4.0 or above:
-
-```
-hciconfig -a
-hci0:	Type: Primary  Bus: USB
-	BD Address: 34:F3:9A:88:60:7A  ACL MTU: 1021:4  SCO MTU: 96:6
-	UP RUNNING PSCAN ISCAN 
-	RX bytes:21777 acl:75 sco:0 events:2890 errors:0
-	TX bytes:603368 acl:76 sco:0 commands:2656 errors:0
-	Features: 0xbf 0xfe 0x0f 0xfe 0xdb 0xff 0x7b 0x87
-	Packet type: DM1 DM3 DM5 DH1 DH3 DH5 HV1 HV2 HV3 
-	Link policy: RSWITCH SNIFF 
-	Link mode: SLAVE ACCEPT 
-	Name: 'wksbae0743'
-	Class: 0x0c010c
-	Service Classes: Rendering, Capturing
-	Device Class: Computer, Laptop
-	HCI Version: 4.2 (0x8)  Revision: 0x100
-	LMP Version: 4.2 (0x8)  Subversion: 0x100
-	Manufacturer: Intel Corp. (2)
-```
-
-Please note that not all BT 4.0 devices are BLE - recently LEGO changed the internal Bluetooth chipset of
-the MINDSTORMS EV3 for a BT 4.0 version **whithout** BLE. You can check that with:
-
-```
-sudo hciconfig -a hci0 lestates
-Supported link layer states:
-	YES Non-connectable Advertising State
-	YES Scannable Advertising State
-	YES Connectable Advertising State
-	YES Directed Advertising State
-	YES Passive Scanning State
-	YES Active Scanning State
-	YES Initiating State/Connection State in Master Role
-	YES Connection State in the Slave Role
-	YES Non-connectable Advertising State and Passive Scanning State combination
-	YES Scannable Advertising State and Passive Scanning State combination
-	YES Connectable Advertising State and Passive Scanning State combination
-	YES Directed Advertising State and Passive Scanning State combination
-	YES Non-connectable Advertising State and Active Scanning State combination
-	YES Scannable Advertising State and Active Scanning State combination
-	YES Connectable Advertising State and Active Scanning State combination
-	YES Directed Advertising State and Active Scanning State combination
-	YES Non-connectable Advertising State and Initiating State combination
-	YES Scannable Advertising State and Initiating State combination
-	YES Non-connectable Advertising State and Master Role combination
-	YES Scannable Advertising State and Master Role combination
-	YES Non-connectable Advertising State and Slave Role combination
-	YES Scannable Advertising State and Slave Role combination
-	YES Passive Scanning State and Initiating State combination
-	YES Active Scanning State and Initiating State combination
-	YES Passive Scanning State and Master Role combination
-	YES Active Scanning State and Master Role combination
-	YES Passive Scanning State and Slave Role combination
-	YES Active Scanning State and Slave Role combination
-	YES Initiating State and Master Role combination/Master Role and Master Role combination
-```
- 
-To use our LEGO BOOST Move Hub we need to know its BT address. We just turn it on and scan for BLE devices near us:
-
-```
-sudo hcitool -i hci0 lescan
-LE Scan ...
-00:1E:C0:3F:D9:DC (unknown)
-00:16:53:A4:CD:7E (unknown)
-00:16:53:A4:CD:7E LEGO Move Hub
-```
-
-'00:16:53:A4:CD:7E' is the BT address, 'LEGO Move Hub' is the friendly name (with current firmware, it's the same
-friendly name for all devices so if you have more than one you should turn just one on, take note of it's BT
-address, then turn it off and repeat the process...)
-
 
 For a basic example, this is how we read the friendly name with python:
 
