@@ -1,11 +1,9 @@
 # Using linux with BLE
 
-Modern linux distributions use [BlueZ](http://www.bluez.org/) for its bluetooth stack.
-
-Bluez 5 include support for BLE devices and we can use just some simple command line commands to access our BOOST Move Hub.
+Modern linux distributions use [BlueZ](http://www.bluez.org/) for its bluetooth stack. Since BlueZ 5.0, linux kernels newer than 3.5 support BLE extension so we can use just some simple command line commands to access our BOOST Move Hub.
 
 
-These guidelines should work on a common linux computer (I use an Ubuntu laptop) but also on a Raspberry Pi running Raspbian (as long as it includes BlueZ 5) and LEGO MINDSTORMS EV3 running ev3dev.
+These guidelines should work on a common linux computer (I use an Ubuntu laptop) but also on a Raspberry Pi running Raspbian and LEGO MINDSTORMS EV3 running ev3dev.
 
 
 Of course, we neeed our computer/Raspberry Pi/ EV3 to be BT BLE compatible. Many modern computers already have some kind of BT 4.0 internal device. The Raspberry Pi 3 and Pi Zero W also include BT 4.0 BLE but older versions and also the EV3 don't so we need to use an USB adapter.
