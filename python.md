@@ -1,4 +1,4 @@
-Using python with BT BLE
+# Using python with BT BLE
 
 Note 1: this guidelines are only for linux.
 
