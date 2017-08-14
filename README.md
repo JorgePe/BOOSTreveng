@@ -27,6 +27,7 @@ Progress so far:
 
 Issues:
 - ~~although gatttool works fine, I'm having [problems with gattlib](https://github.com/JorgePe/BOOSTreveng/issues/4)~~
+- MIT AppInventor 2  is a pain, I believe I'm having a similar problem with encoding
 
 There are also some text files trying to explain how to use bash or python. Please accept that I lack a programming background
 and also that I'm not writing a book. 
