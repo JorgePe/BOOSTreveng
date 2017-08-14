@@ -26,4 +26,4 @@ Progress so far:
 - A bash script with a short example on how to control motors (soon also in python)
 
 Issues:
-- although gatttool works fine, I'm having [problems with gattlib](https://github.com/JorgePe/BOOSTreveng/issues/4)
+- ~~although gatttool works fine, I'm having [problems with gattlib](https://github.com/JorgePe/BOOSTreveng/issues/4)~~
