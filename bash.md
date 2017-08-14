@@ -79,3 +79,16 @@ LE Scan ...
 ```
 
 '00:16:53:A4:CD:7E' is the BT address, 'LEGO Move Hub' is the friendly name (with current firmware, it's the same friendly name for all devices so if you have more than one you should turn just one on, take note of it's BT address, then turn it off and repeat the process...)
+
+We can read this frindly name directly from the device with
+
+```
+gatttool -i hci0 -b 00:16:53:A4:CD:7E  --char-read --handle=0x07
+Characteristic value/descriptor: 4c 45 47 4f 20 4d 6f 76 65 20 48 75 62
+```
+
+The result is a string of hexadecimal chars, if we [convert it to ASCII](http://www.rapidtables.com/convert/number/hex-to-ascii.htm) we'll get
+
+```
+LEGO Move Hub
+```
