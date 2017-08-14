@@ -29,5 +29,7 @@ Issues:
 - ~~although gatttool works fine, I'm having [problems with gattlib](https://github.com/JorgePe/BOOSTreveng/issues/4)~~
 - MIT AppInventor 2  is a pain, I believe I'm having a similar problem with encoding
 
+I really don't understand why LEGO developers opted to put everything in just one handle. It forces us to send a long string even for simple commands, which increases latency. And using MIT App Inventor 2 (and probably on blockly languages like Scratch) is difficult and clumsy.
+
 There are also some text files trying to explain how to use bash or python. Please accept that I lack a programming background
 and also that I'm not writing a book. 
