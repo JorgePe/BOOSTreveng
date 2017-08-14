@@ -1,4 +1,6 @@
-Modern linux distributions use BlueZ for the bluetooth stack.
+# Using linux with BLE
+
+Modern linux distributions use [BlueZ](http://www.bluez.org/) for its bluetooth stack.
 Bluez 5 include support for BLE devices and we can use just some simple command line commands to access our BOOST Move Hub.
 
 These guidelines should work on a common linux computer (I use an Ubuntu laptop) but also on a Raspberry Pi running Raspbian (as long as it includes BlueZ 5) and LEGO MINDSTORMS EV3 running ev3dev.
