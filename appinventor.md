@@ -14,6 +14,6 @@ We need to pass 4 arguments:
 
 - **values** is a list containing our command, we can use a "make a list" block
 
-[https://github.com/JorgePe/BOOSTreveng/blob/master/RGB_White.png]
+[[https://github.com/JorgePe/BOOSTreveng/blob/master/RGB_White.png]]
 
 In the photo, we send command "set RGB LED color to White", the hexadecimal format of the command is "080081321151000A" but in decimal it is "8 0 129 50 17 81 00 10" so we use a "make a list" with 8 items. 
