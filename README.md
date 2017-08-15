@@ -28,7 +28,7 @@ Progress so far:
 Issues:
 - ~~although gatttool works fine, I'm having [problems with gattlib](https://github.com/JorgePe/BOOSTreveng/issues/4)~~
 - MIT AppInventor 2  is a pain, I believe I'm having a similar problem with encoding
-- Update: there is a new version of the BLE extension for MIT AppInventor 2: http://iot.appinventor.mit.edu/assets/resources/edu.mit.appinventor.ble.aix
+- Update: there is a new version of the [BLE extension](http://iot.appinventor.mit.edu/assets/resources/edu.mit.appinventor.ble.aix) for MIT AppInventor 2 and it works!!!
 
 
 I really don't understand why LEGO developers opted to put everything in just one handle. It forces us to send a long string even for simple commands, which increases latency. And using MIT App Inventor 2 (and probably on blockly languages like Scratch) is difficult and clumsy.
