@@ -1,4 +1,4 @@
-MIT APP Inventor 2 for Android
+#MIT APP Inventor 2 for Android
 
 Simple example on how to use new version (July 2017) of BluetoothLE extension to create a simple Android App that controls
 a BOOST car.
@@ -18,6 +18,7 @@ You need to import extension with URL "http://iot.appinventor.mit.edu/assets/res
 - LEFT
 - RIGHT
 - BACK
+
 The fith button is used to Connect or Disconnect to/from the BOOST Move Hub.
 
 They are all same, sending a list of 13 bytes, given in hexadecimal format:
@@ -28,5 +29,5 @@ BACK: 0c018139110a00066464647f03
 
 Each commnad turns motor A and B ON for 1.5 seconds (00 06 = 1536 ms) at full speed in each direction (64 = 100%, 9B = -100%)
 
-!(https://github.com/JorgePe/BOOSTreveng/blob/master/Examples/AppInventor/BOOST_RC_01.png)
-!(https://github.com/JorgePe/BOOSTreveng/blob/master/Examples/AppInventor/BOOST_RC_02.png)
+![Designer View](https://github.com/JorgePe/BOOSTreveng/blob/master/Examples/AppInventor/BOOST_RC_01.png)
+![Blocks View](https://github.com/JorgePe/BOOSTreveng/blob/master/Examples/AppInventor/BOOST_RC_02.png)
