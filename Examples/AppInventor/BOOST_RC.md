@@ -1,7 +1,7 @@
-#MIT APP Inventor 2 for Android
+# MIT APP Inventor 2 for Android example
 
-Simple example on how to use new version (July 2017) of BluetoothLE extension to create a simple Android App that controls
-a BOOST car.
+A simple example on how to use new version (July 2017) of BluetoothLE extension to create a simple Android App that controls
+a LEGO BOOST car.
 
 You need to import extension with URL "http://iot.appinventor.mit.edu/assets/resources/edu.mit.appinventor.ble.aix"
 
@@ -11,7 +11,7 @@ You need to import extension with URL "http://iot.appinventor.mit.edu/assets/res
 
 - **ConnectWithAddress** connects to our BOOST
 
-- "WriteBytesWithResponse" sends a command
+- **WriteBytesWithResponse** sends a command
 
 4 commands are used in this example, each associated with a button:
 - FRONT
