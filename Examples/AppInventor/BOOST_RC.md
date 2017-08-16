@@ -1,4 +1,4 @@
-# MIT APP Inventor 2 for Android example
+# Example: MIT APP Inventor 2 for Android
 
 A simple example on how to use new version (July 2017) of BluetoothLE extension to create a simple Android App that controls
 a LEGO BOOST car.
