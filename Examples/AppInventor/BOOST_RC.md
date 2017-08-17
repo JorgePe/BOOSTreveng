@@ -31,3 +31,6 @@ Each commnad turns motor A and B ON for 1.5 seconds (00 06 = 1536 ms) at full sp
 
 ![Designer View](https://github.com/JorgePe/BOOSTreveng/blob/master/Examples/AppInventor/BOOST_RC_01.png)
 ![Blocks View](https://github.com/JorgePe/BOOSTreveng/blob/master/Examples/AppInventor/BOOST_RC_02.png)
+
+A video with a short tutorial showing how to use the **WriteBytesWithResponse** block available:
+![App Inventor and BOOST](https://youtu.be/As90gAQfyFM)
