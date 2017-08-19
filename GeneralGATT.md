@@ -51,7 +51,7 @@ We can change "Device Name" but after power cycle the firmware resets it to "LEG
 All functionality seems to be on handle 0x0e (uuid: 00001624-1212-efde-1623-785feabcd123)
 
 
-As noticed by @rblaakmeer on [isse #5](0800813211510009) all messages sent to / recevived from the BOOST Move Hub start with a number stating the length of the message, like the command to change RGB LED color to Red:
+As noticed by [rblaakmeer](https://github.com/rblaakmeer) on [isuse #5](https://github.com/JorgePe/BOOSTreveng/issues/5) all messages sent to / recevived from the BOOST Move Hub start with a number stating the length of the message, like the command to change RGB LED color to Red:
 
 0800813211510009
 
