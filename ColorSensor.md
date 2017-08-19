@@ -26,36 +26,46 @@ Notification handle = 0x000e value: 08 00 45 01 ff 0a ff 01
 ....
 ```
 
-If I touch a white surface with the sensor it reads something like null.
-Dark color surfaces read black
+   The BOOST Move Hub only send a notification when there is a change.  
 
-With the sensor about 5 mm over a colored surface (at night, light from ceilling lamp):
-
-   WHITE              08 00 45 01 0a 01 ff 0a  
-   BLUE               08 00 45 01 03 02 ff 02  
-   BLACK              08 00 45 01 00 0a ff 01  
-   RED                08 00 45 01 07 01 ff 08  
-   ORANGE (says red)  08 00 45 01 09 01 ff 09  
-   YELLOW             08 00 45 01 0a 00 ff 06  
-
-
-   The sensor (or the App) has some difficulties with greens (got BLUE) and oranges (got RED).  
-   Seems a limitation from the App - with the first and second orange blocks we need to choose a color and we only have 7 options:
-   - null
+   The color sensor understands few colors, apparently the same 7 available as options in the  
+   first and second orange blocks where we need to choose the color to be detected:
+   - ? null ?
    - black
    - blue
    - green
    - yellow
    - red
    - white
+   
+   If I touch a white surface with the sensor it reads null.  
+   Dark color surfaces read black  
+   
+   Some rough measurings:
+   
+   WHITE              08 00 45 01 0a 00 ff 0a  
+   BLUE               08 00 45 01 03 00 ff 01  
+   BLACK              08 00 45 01 00 0a ff 01  
+   RED                08 00 45 01 09 00 ff 03  
+   GREEN              08 00 45 01 05 00 ff 02  
+   YELLOW             08 00 45 01 07 00 ff 05  
+
 
 First byte = 08 is the number of bytes in the message (thanks @rblaakmeer)
 
 2nd, 3rd and 4th bytes = 00 45 01 are still unknown
 
-5th, 6th and 8th bytes change with the color (and/or intensity ?)
+5th byte seems the same index used for RGB LED, with BLACK as OFF
 
-7th byte = FF is still unknown
+- BLACK  0x00
+- BLUE   0x03
+- GREEN  0x05 (Cyan or Turquoise in RGB LED)
+- YELLOW 0x07
+- RED    0x09
+- WHITE  0x0A
 
-
-Need more time and more color samples
+   When the sensor is a few centimeters far, instead of returning a color index it returns  
+   FF.  
+   The 6th byte changes with distance but it doesn't seem to measure it.
+   The 8th byte also changes. It's strange to be be separated from 5th and 6th bytes by a  
+   fixed 7th byte, always FF.
