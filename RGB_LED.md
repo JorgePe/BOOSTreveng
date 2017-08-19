@@ -2,7 +2,7 @@
 
 In LEGO BOOST App, the first purple block changes the RGB LED color
 
-[RGB LED block](https://github.com/JorgePe/BOOSTreveng/blob/master/LEGO_BOOST_App_blocks/RGB_LED_color.png)
+![RGB LED block](https://github.com/JorgePe/BOOSTreveng/blob/master/LEGO_BOOST_App_blocks/RGB_LED_color.png)
 
 Command is `080081321151000n`
 
