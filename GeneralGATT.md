@@ -1,8 +1,10 @@
-General GATT findings:
+#General GATT findings:
 
 Firmware as of 11 August 2017
+
 App version 1.0.11 / Firmware: 1.0.00.0140
 
+```
 gatttool -I -b 00:16:53:A4:CD:7E
 
 primary
@@ -38,14 +40,18 @@ handle 0x0007 = 2A00 = Device Name
 
 char-read-hnd 0x07
 Characteristic value/descriptor: 4c 45 47 4f 20 4d 6f 76 65 20 48 75 62
-"LEGO Move Hub"
+```
+
+The hexadecimal values on string "4c 45 47 4f 20 4d 6f 76 65 20 48 75 62" are the ASCII values of "LEGO Move Hub"
+
 
 We can change "Device Name" but after power cycle the firmware resets it to "LEGO Move Hub" again.
 
+
 All functionality seems to be on handle 0x0e (uuid: 00001624-1212-efde-1623-785feabcd123)
 
-As noticed by @rblaakmeer on [isse #5](0800813211510009) all messages sent to / recevived from the BOOST Move Hub start with a number
-stating the length of the message, like the command to change RGB LED color to Red:
+
+As noticed by @rblaakmeer on [isse #5](0800813211510009) all messages sent to / recevived from the BOOST Move Hub start with a number stating the length of the message, like the command to change RGB LED color to Red:
 
 0800813211510009
 
