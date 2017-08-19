@@ -9,17 +9,18 @@ The first byte is the length of the command (i.e. 8 bytes)
 
    n in [0..A]
 
-   0 = none (off)
-   1 = pink
-   2 = purple
-   3 = blue
-   4 = light blue
-   5 = cyan?
-   6 = green
-   7 = yellow
-   8 = orange
-   9 = red
-   A = white
+   0 = none (off)  
+   1 = pink  
+   2 = purple  
+   3 = blue  
+   4 = light blue  
+   5 = cyan?  
+   6 = green  
+   7 = yellow  
+   8 = orange  
+   9 = red  
+   A = white  
+   
 
 ```
 gatttool -b 00:16:53:A4:CD:7E --char-write-req --handle=0x0e --value=0800813211510007
@@ -56,4 +57,4 @@ do
 done
 ```
 
-![Video of previous script](https://youtu.be/lx0ZibpgLAM)
+[Video of previous script](https://youtu.be/lx0ZibpgLAM)
