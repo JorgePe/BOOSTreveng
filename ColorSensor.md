@@ -1,6 +1,7 @@
 # Color Sensor
 
 The third orange block looks like continuous color reading:
+
 ![ColorSensor](https://github.com/JorgePe/BOOSTreveng/blob/master/LEGO_BOOST_App_blocks/ColorSensor_continuous.png)
 
 I've been sniffing it with the color sensor at port C.
