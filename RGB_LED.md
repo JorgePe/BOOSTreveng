@@ -6,6 +6,7 @@ In LEGO BOOST App, the fisrt purple block chnages the RGB LED color
 Command is `080081321151000n`
 The first byte is the length of the command (i.e. 8 bytes)
 
+
    n in [0..A]
 
    0 = none (off)
@@ -55,4 +56,4 @@ do
 done
 ```
 
-https://youtu.be/lx0ZibpgLAM
+![Video of previous script](https://youtu.be/lx0ZibpgLAM)
