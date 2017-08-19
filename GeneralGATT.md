@@ -1,4 +1,4 @@
-#General GATT findings:
+# General GATT findings:
 
 Firmware as of 11 August 2017
 
