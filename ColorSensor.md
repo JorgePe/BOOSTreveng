@@ -1,9 +1,15 @@
-Using Color Sensor in Port C with 3rd block from the left in the App
-(looks like continuous color reading)
+# Color Sensor
+
+The third orange block looks like continuous color reading:
+![ColorSensor](https://github.com/JorgePe/BOOSTreveng/blob/master/LEGO_BOOST_App_blocks/ColorSensor_continuous.png)
+
+I've been sniffing it with the color sensor at port C.
+
 
 We need to activate notifications by writing "0100" to handle 0x0f = UUID 2902
 
-[Client Characteristic Configuration](https://www.bluetooth.com/specifications/gatt/viewer?attributeXmlFile=org.bluetooth.descriptor.gatt.client_characteristic_configuration.xml)
+UUID 2901 is defined as the [Client Characteristic Configuration](https://www.bluetooth.com/specifications/gatt/viewer?attributeXmlFile=org.bluetooth.descriptor.gatt.client_characteristic_configuration.xml) in the
+Bluetooth specs.
 
 Then we activate mode by writing "0a004101080100000001" to handle 0x06
 
