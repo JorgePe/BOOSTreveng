@@ -4,7 +4,7 @@ In LEGO BOOST App, the first purple block changes the RGB LED color
 
 ![RGB LED block](https://github.com/JorgePe/BOOSTreveng/blob/master/LEGO_BOOST_App_blocks/RGB_LED_color.png)
 
-Command is `080081321151000n`
+BLE Command is a write request of `080081321151000n`
 
 The first byte is the length of the command (i.e. 8 bytes), the meaning of the next 6 bytes is still unknown.
 The last byte is an index of the color, in the same order as used by the LEGO BOOST App:
