@@ -13,7 +13,7 @@ UUID 2902 is defined as the [Client Characteristic Configuration](https://www.bl
 Bluetooth specs. By activating notifications on one characteristic we "subscribe" to further messages comming
 from it.
 
-Then we activate "?continuous color reading?" mode by writing `0a004101080100000001` to handle 0x0e
+Then we activate "?continuous color reading?" mode by writing `0a004101080100000001` to handle 0x0e and keep reading.
 
 ```
 gatttool -b 00:16:53:A4:CD:7E --char-write-req --handle=0x0f --value=0100
