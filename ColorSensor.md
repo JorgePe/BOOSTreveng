@@ -39,8 +39,8 @@ With the sensor about 5 mm over a colored surface (at night, light from ceilling
    YELLOW             08 00 45 01 0a 00 ff 06  
 
 
-   The sensor (or tha App) has some difficulties with greens (got BLUE) and oranges (got RED).  
-   Seems a limitation from the App - with the first orange block we need to choose a color and we only have 7 options:
+   The sensor (or the App) has some difficulties with greens (got BLUE) and oranges (got RED).  
+   Seems a limitation from the App - with the first and second orange blocks we need to choose a color and we only have 7 options:
    - null
    - black
    - blue
