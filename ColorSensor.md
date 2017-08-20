@@ -69,3 +69,46 @@ First byte = 08 is the number of bytes in the message (thanks @rblaakmeer)
    The 6th byte changes with distance but it doesn't seem to measure it.
    The 8th byte also changes. It's strange to be be separated from 5th and 6th bytes by a  
    fixed 7th byte, always FF.
+   
+Based on this, this shell script works fine in Ubuntu:
+
+```
+#!/usr/bin/env bash
+
+# activate notifications
+gatttool -b 00:16:53:A4:CD:7E --char-write-req --handle=0x0f --value=0100
+# activate continuous color reading
+gatttool -b 00:16:53:A4:CD:7E --char-write-req --handle=0x0e --value=0a004101080100000001 --listen | 
+  while IFS= read -r line
+  do 
+    output=${line##*:}
+    output2=($output)
+
+    case ${output2[4]} in
+      00)
+        echo "BLACK"
+        ;;
+      03)
+        echo "BLUE"
+        ;;
+      05)
+        echo "GREEN"
+        ;;
+      07)
+        echo "YELLOW"
+        ;;
+      09)
+        echo "RED"
+        ;;
+      0a)
+        echo "WHITE"
+        ;;
+      ff)
+        echo "TOO FAR"
+        ;;
+      *)
+        echo "???"
+        ;;
+    esac
+  done
+```
