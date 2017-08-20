@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# this script worls on EV3 but lags a lot if it buffers to much messages from
+# BOOST Hub while it speaks last result
+
 # activate notifications
 gatttool -i hci0 -b 00:16:53:A4:CD:7E --char-write-req --handle=0x0f --value=0100
 # activate continuous color reading
