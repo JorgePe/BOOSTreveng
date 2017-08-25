@@ -26,6 +26,7 @@ Progress so far:
 - A bash script with a short example on how to control motors (soon also in python)
 - MIT App Inventor 2 released last month a new version of the [BLE extension](http://iot.appinventor.mit.edu/assets/resources/edu.mit.appinventor.ble.aix) with lots of new features... and it works!
 - Color Sensor- can identify colors
+- Distance Sensor - can measure distances
 
 Issues:
 - ~~although gatttool works fine, I'm having [problems with gattlib](https://github.com/JorgePe/BOOSTreveng/issues/4)~~
