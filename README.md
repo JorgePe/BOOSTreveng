@@ -28,6 +28,11 @@ Progress so far:
 - Color Sensor- can identify colors
 - Distance Sensor - can measure distances
 
+Roadmap:
+- Motor rotation readings
+- Move Hub 6-axis tilt sensor readings
+- Color sensor light-mode
+
 Issues:
 - ~~although gatttool works fine, I'm having [problems with gattlib](https://github.com/JorgePe/BOOSTreveng/issues/4)~~
 - ~~MIT AppInventor 2  is a pain, I believe I'm having a similar problem with encoding~~
