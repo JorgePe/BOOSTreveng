@@ -25,6 +25,7 @@ Progress so far:
 - Motors (A, B, A+B, C, D) speed/timed control (also angle/rotation control but not complete yet)
 - Color Sensor- can identify colors
 - Distance Sensor - can measure distances
+- Motor rotation readings (A, B, A+B, C, D)
 - MIT App Inventor 2 released last month a new version of the [BLE extension](http://iot.appinventor.mit.edu/assets/resources/edu.mit.appinventor.ble.aix) with lots of new features... and it works!
 
 Content:
@@ -35,9 +36,9 @@ Content:
 Things will look somewhat chaotic for a while. Please accept that I lack a programming background and also that I'm not writing a book.
 
 Roadmap:
-- Motor rotation readings (Interactive Motor already achieved)
 - Move Hub 6-axis tilt sensor readings
-- Color sensor light-mode
+- Color sensor colored-light mode
+- Color sensor ? light intensity ?
 
 Issues:
 - ~~although gatttool works fine, I'm having [problems with gattlib](https://github.com/JorgePe/BOOSTreveng/issues/4)~~
