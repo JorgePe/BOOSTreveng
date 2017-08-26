@@ -153,3 +153,12 @@ Notification handle = 0x000e value: 05 00 45 02 fd
 Notification handle = 0x000e value: 05 00 45 02 00  -> it returns to 00 when I stop 
 ```
 
+Update:
+
+This command activates readings of Interactive Motor on port C:
+```
+0a004101020100000001
+
+gatttool -b 00:16:53:A4:CD:7E --char-write-req --handle=0x0f --value=0100
+gatttool -b 00:16:53:A4:CD:7E --char-write-req --handle=0x0e --value=0a004101020100000001 --listen
+```
