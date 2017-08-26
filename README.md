@@ -7,8 +7,9 @@ My main interest is using Linux (MINDSTORMS EV3 with ev3dev) but this informatio
 In Linux (Ubuntu) I usually use the gatttool command (from BlueZ 5) for simple bash scripts and pybluez (or just gattlib, https://bitbucket.org/OscarAcena/pygattlib) for python scripts. Usually same scripts run fine on ev3dev but since bluez, pybluez
 and the linux kernel are a bit behind Ubuntu sometimes I need to call gatttool from python as a workaround.
 
-You should also see this project that implements a swift App for iOS:
-https://github.com/bricklife/BoostRemote
+You should also see these other projects:
+- [BoostRemote](https://github.com/bricklife/BoostRemote) - a swift App for iOS
+- [movehub](https://github.com/hobbyquaker/node-movehub) - a Node.js interface
 
 **DISCLAIMER:**
 
