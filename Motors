@@ -38,7 +38,7 @@ So time is in mil 647f03liseconds
 
 Duty Cycle also controls the direction:
 50% Clockwise = 50d = 32h
-100% Clockwise = 50d = 64h
+100% Clockwise = 100d = 64h
 50% Counterclockwise = 255d-50d = 205d = CDh
 100% Counterclockwise = 255d-100d = 155d = 9Bh
 
