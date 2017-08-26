@@ -65,8 +65,7 @@ C 50 360º
 D 50 360º
 0e:00:81:02:11:0b:68:01:00:00:32:64:7f:03
 
-0c0081 and 0e0081 seem to do the same and sometime it appears one or the other
-I think motor command may change (increase first byte?) as I switch configuration (like swap motor)-
+First byte seems to be the message length
 
 68:01 = 360º (LSB + MSB)
 
