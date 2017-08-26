@@ -162,3 +162,12 @@ This command activates readings of Interactive Motor on port C:
 gatttool -b 00:16:53:A4:CD:7E --char-write-req --handle=0x0f --value=0100
 gatttool -b 00:16:53:A4:CD:7E --char-write-req --handle=0x0e --value=0a004101020100000001 --listen
 ```
+
+And this commands activate reading of internal motors:
+
+```
+0a0041 37 020100000001 - port A
+0a0041 38 020100000001 - port B
+0a0041 39 020100000001 - port A+B
+```
+Last mode (39 = port A+B) is strange: we don't get separate readings for both axles, we get one global reading that changes whenever any of the axles (A or B) rotates.
