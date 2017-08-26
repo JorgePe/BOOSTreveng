@@ -35,7 +35,7 @@ Content:
 Things will look somewhat chaotic for a while. Please accept that I lack a programming background and also that I'm not writing a book.
 
 Roadmap:
-- Motor rotation readings
+- Motor rotation readings (Interactive Motor already achieved)
 - Move Hub 6-axis tilt sensor readings
 - Color sensor light-mode
 
