@@ -37,7 +37,7 @@ Content:
 Things will look somewhat chaotic for a while. Please accept that I lack a programming background and also that I'm not writing a book.
 
 Roadmap:
-- Move Hub 6-axis tilt sensor readings
+- Move Hub 6-axis tilt sensor readings [on progress]
 - Color sensor colored-light mode
 - Color sensor ? light intensity ?
 
