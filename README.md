@@ -41,6 +41,10 @@ Roadmap:
 - Color sensor colored-light mode
 - Color sensor ? light intensity ?
 
+Totally blind yet:
+- battery level - why didn't LEGO used the standard characteristic?!?
+- scan hardware configuration, detect changes
+
 Issues:
 - ~~although gatttool works fine, I'm having [problems with gattlib](https://github.com/JorgePe/BOOSTreveng/issues/4)~~
 - ~~MIT AppInventor 2  is a pain, I believe I'm having a similar problem with encoding~~
