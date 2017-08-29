@@ -22,6 +22,36 @@ motor B 50% 0.2s
     1  2  3  4  5  6  7  8  9  10 11 12
     0c:00:81:38:11:09:c8:00:32:64:7f:03
 
+## Test Script
+
+```
+                 /- Port (AB=0x39 - motor group)
+                 |
+        /- len!  |     /- Value Type
+        |        |     |
+        0. 1. 2. 3. 4. 5. 6. 7. 8. 9. 10 11 12 (0x0C = 13)
+  data: 0c 01 81 39 11 0a 00 06 9B 9B 64 7f 03
+  data: 0c 01 81 39 11 0a 80 09 9B 64 64 7f 03
+  data: 0c 01 81 39 11 0a 00 06 9B 9B 64 7f 03
+  data: 0c 01 81 39 11 0a 80 09 9B 64 B4 7f 03
+              |
+              \- packet-type - 0x81 is 'set port value'
+```
+
+	  gatttool -i hci1 \
+      -b 00:16:53:A4:CD:7E \
+      --char-write-req \
+      --handle=0x0e \
+      --value=0c018139110a00069B9B647f03
+	  gatttool -i hci1 -b 00:16:53:A4:CD:7E --char-write-req --handle=0x0e \
+             --value=0c018139110a80099B64647f03
+	  sleep 2.4
+	  gatttool -i hci1 -b 00:16:53:A4:CD:7E --char-write-req --handle=0x0e \
+            --value=0c018139110a00069B9B647f03
+	  sleep 1.5
+	  gatttool -i hci1 -b 00:16:53:A4:CD:7E --char-write-req --handle=0x0e \
+             --value=0c018139110a80099B64B47f03
+
 ## So...
 
 ### General Packet Header:
@@ -40,6 +70,7 @@ packet (0x4).
 5. `0x11` - unknown
 6. Value Type:
   - 0x09 - Time Value
+  - 0x0A - ??? - Test Script
   - 0x0B - Angle Value
 
 #### Time Value: Byte 6 Type 0x09
@@ -80,6 +111,13 @@ Trailer (same for Time Value):
 - 12 - ?? value 0x64
 - 13 - ?? value 0x7F
 - 14 - ?? value 0x03 (same for Time Value)
+
+#### Unknown Value: Byte 6 Type 0xA (Test Script)
+
+This value is used in the motor test script.
+E.g. it seems to allow the group motors to run in different directions
+(e.g. to turn Vernie).
+
 
 #### Duty Cycle
 
