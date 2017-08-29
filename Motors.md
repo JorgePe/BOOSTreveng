@@ -135,6 +135,11 @@ Payload
          \- duty cycle w/ direction? 0x64=100% 0x9B=100% reverse
 ```
 
+Byte 9, 10, 11 - they all look like duty cycles? For the different ports?
+
+The ones starting with '80' seem to turn Vernie a lot. The other two make it
+go backwards.
+
 #### Duty Cycle
 
      50% = 0x32 (50  decimal)
