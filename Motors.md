@@ -73,7 +73,7 @@ packet (0x4).
 5. `0x11` - unknown
 6. Value Type:
   - 0x09 - Time Value
-  - 0x0A - ??? - Test Script
+  - 0x0A - Time Multi Motor Value - Test Script
   - 0x0B - Angle Value
 
 #### Time Value: Byte 6 Type 0x09
@@ -115,7 +115,9 @@ Trailer (same for Time Value):
 - 13 - ?? value 0x7F
 - 14 - ?? value 0x03 (same for Time Value)
 
-#### Unknown Value: Byte 6 Type 0xA (Test Script)
+#### Time Multi Motor Value: Byte 6 Type 0xA (Test Script)
+
+This only seems to work for motor groups (i.e. port 0x39).
 
 This value is used in the motor test script.
 E.g. it seems to allow the group motors to run in different directions
@@ -135,12 +137,16 @@ Payload
          \- duty cycle w/ direction? 0x64=100% 0x9B=100% reverse
 ```
 
-Byte 9, 10, 11 - they all look like duty cycles? For the different ports?
+- Byte 7/8 - at least 8 is a timing
+- Byte 9   - duty cycle motor A (including direction)
+- Byte 10  - duty cycle motor B (including direction)
+- Byte 11  - also looks like a duty cycle, but for what? Thoug 0xB4
+             looks like 180 degrees?
 
 The ones starting with '80' seem to turn Vernie a lot. The other two make it
 go backwards.
 
-Byte 11: 0xB4 = decimal 180. Maybe degrees?
+Byte 11: 0xB4 = decimal 180. Maybe degrees? some angle?
 
 #### Duty Cycle
 
