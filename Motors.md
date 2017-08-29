@@ -117,7 +117,20 @@ Trailer (same for Time Value):
 This value is used in the motor test script.
 E.g. it seems to allow the group motors to run in different directions
 (e.g. to turn Vernie).
+The trailer has one byte different from the other value types
 
+Motor Packet header: 0c 01 81 39 11 0a
+
+Payload
+```
+              | trailer, same like other packets (0x7F, 0x03)
+ 7  8  9 10 11 12 13              
+00 06 9B 9B 64 7f 03
+80 09 9B 64 64 7f 03
+00 06 9B 9B 64 7f 03
+80 09 9B 64 B4 7f 03  // Note: trailer 11 is different here, 0xB4
+         \- duty cycle w/ direction? 0x64=100%
+```
 
 #### Duty Cycle
 
