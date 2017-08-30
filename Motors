@@ -75,10 +75,13 @@ First byte seems to be the message length
 
 68:01 = 360º (LSB + MSB)
 
-0c0081 M 11 09 T DT 647f03 = Turn motor M with duty cycle DT for T milliseconds 
-0c0081 M 11 0b DEG 0000 DT 647f03 = Rotate motor M DEG degrees with duty cycle DT
+0c0081 M 11 09 T DT 647f03 = Turn motor M (1 Byte) with duty cycle DT (1 Byte) for T (2 Bytes) milliseconds
+0c0081 M 11 0b DEG DT 647f03 = Rotate motor M (1 Byte) DEG (4 Bytes) degrees with duty cycle DT (1 Byte)
 
-5A 00 = 90º
-B4 00 = 180º
-0E 01 = 270º
-68 01 = 360º
+5A 00 00 00 = 90º
+B4 00 00 00 = 180º
+0E 01 00 00 = 270º
+68 01 00 00 = 360º
+10 0E 00 00 = 3600°
+40 19 01 00 = 72000°
+
