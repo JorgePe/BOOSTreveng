@@ -11,6 +11,7 @@ You should also see these other projects:
 - [BoostRemote](https://github.com/bricklife/BoostRemote) - a swift App for iOS
 - [movehub](https://github.com/hobbyquaker/node-movehub) - a Node.js interface
 - [boostanista](https://github.com/mithrendal/boostanista) - alternative remote for Lego Boost with Pythonista and iOS
+- [pyb00st](https://github.com/JorgePe/pyb00st) - my own attempt to create a python3 library
 
 **DISCLAIMER:**
 
