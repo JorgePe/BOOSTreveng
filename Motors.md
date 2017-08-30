@@ -25,19 +25,16 @@ motor B 50% 0.2s
 
 ## Test Script
 
-Note: Either the payload or the packet length is wrong 
-      (0xC - 12 bytes vs 13 given?)
-
 ```
                  /- Port (AB=0x39 - motor group)
                  |
         /- len!  |     /- Value Type
         |        |     |
         0. 1. 2. 3. 4. 5. 6. 7. 8. 9. 10 11 12 (0x0C = 12 vs 13!!)
-  data: 0c 01 81 39 11 0a 00 06 9B 9B 64 7f 03
-  data: 0c 01 81 39 11 0a 80 09 9B 64 64 7f 03
-  data: 0c 01 81 39 11 0a 00 06 9B 9B 64 7f 03
-  data: 0c 01 81 39 11 0a 80 09 9B 64 B4 7f 03
+  data: 0d 01 81 39 11 0a 00 06 9B 9B 64 7f 03
+  data: 0d 01 81 39 11 0a 80 09 9B 64 64 7f 03
+  data: 0d 01 81 39 11 0a 00 06 9B 9B 64 7f 03
+  data: 0d 01 81 39 11 0a 80 09 9B 64 B4 7f 03
               |
               \- packet-type - 0x81 is 'set port value'
 ```
