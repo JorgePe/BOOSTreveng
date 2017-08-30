@@ -10,6 +10,7 @@ and the linux kernel are a bit behind Ubuntu sometimes I need to call gatttool f
 You should also see these other projects:
 - [BoostRemote](https://github.com/bricklife/BoostRemote) - a swift App for iOS
 - [movehub](https://github.com/hobbyquaker/node-movehub) - a Node.js interface
+- [boostanista](https://github.com/mithrendal/boostanista) - alternative remote for Lego Boost with Pythonista and iOS
 
 **DISCLAIMER:**
 
