@@ -178,3 +178,11 @@ B4 00 = 180º
 68 01 = 360º
 ```
 
+
+Tested examples:
+* `0c 00 81 39 11 09 e8 03 64 64 7f 03` move A+B for 1 second with 100% DC
+* `0d 00 81 39 11 0a e8 03 64 9b 64 7f 03` move A for 1s with 100% DC and B for 1s with -100% DC (oppositional movement)
+* `0e 00 81 39 11 0b 5a 00 00 00 0e 64 7f 03` move A+B 90° with 15% DC
+* `0f 00 81 39 11 0c 5a 00 00 00 0e f1 64 7f 03` move A 90° with 15% DC and B 90° with -15% DC (oppositional movement)
+
+
