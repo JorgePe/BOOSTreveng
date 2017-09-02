@@ -1,16 +1,30 @@
 subscribed to characteristic 00001624-1212-efde-1623-785feabcd123
 
 received:
+* `12 00 01 01 06 4c 45 47 4f 20 4d 6f 76 65 20 48 75 62` - Name of the Hub. String `LEGO Move Hub` starts at offset 5
+* `09 00 01 03 06 40 01 00 10` - ?
+* `09 00 01 04 06 00 00 00 04` - ?
+* `06 00 01 07 06 00` - ?
+* `14 00 01 08 06 4c 45 47 4f 20 53 79 73 74 65 6d 20 41 2f 53` - ?
+* `09 00 01 09 06 37 2e 32 63` - ?
+* `07 00 01 0a 06 00 03` - ?
+* `06 00 01 0b 06 40` - ?
 
-* `0f 00 04 01 01 25 00 00 00 00 10 00 00 00 10` - ?
-* `0f 00 04 02 01 26 00 00 00 00 10 00 00 00 10` - ?
-* `0f 00 04 37 01 27 00 00 00 00 10 00 00 00 10` - ?
-* `0f 00 04 38 01 27 00 00 00 00 10 00 00 00 10` - ?
-* `09 00 04 39 02 27 00 37 38` - Port Group: 0x39 consists of 0x37 and 0x38
-* `0f 00 04 32 01 17 00 00 00 00 10 00 00 00 10` - ?
-* `0f 00 04 3a 01 28 00 00 00 00 10 00 00 00 02` - ?
-* `0f 00 04 3b 01 15 00 02 00 00 00 02 00 00 00` - ?
-* `0f 00 04 3c 01 14 00 02 00 00 00 02 00 00 00` - ?
+* `06 00 03 01 04 00`
+* `06 00 03 02 04 00`
+* `06 00 03 03 04 00`
+* `06 00 03 04 04 00`
+
+* `0f 00 04 01 01 25 00 00 00 00 10 00 00 00 10` - Port Info
+* `0f 00 04 02 01 26 00 00 00 00 10 00 00 00 10` - Port Info
+* `0f 00 04 37 01 27 00 00 00 00 10 00 00 00 10` - Port Info
+* `0f 00 04 38 01 27 00 00 00 00 10 00 00 00 10` - Port Info
+* `09 00 04 39 02 27 00 37 38` - Port Info - Group: 0x39 consists of 0x37 and 0x38
+* `0f 00 04 32 01 17 00 00 00 00 10 00 00 00 10` - Port Info
+* `0f 00 04 3a 01 28 00 00 00 00 10 00 00 00 02` - Port Info
+* `0f 00 04 3b 01 15 00 02 00 00 00 02 00 00 00` - Port Info
+* `0f 00 04 3c 01 14 00 02 00 00 00 02 00 00 00` - Port Info
+
 * `05 00 82 37 01` - Motor A (0x37) starts movement
 * `05 00 82 37 0a` - Motor A (0x37) stops movement
 * `05 00 82 37 05` - Motor A (0x37) Is reported when a command is received while the motor is still in movement
@@ -21,7 +35,9 @@ received:
 * Byte 1? Protocol version? HiByte of message length? 
 
 * Byte 2 is the message type: 
-  * `0x04` port information
+  * `0x01` ?
+  * `0x03` ?
+  * `0x04` port information
   * `0x45` sensor reading
   * `0x82` port changed
   
