@@ -2,7 +2,8 @@ subscribed to characteristic 00001624-1212-efde-1623-785feabcd123
 
 received:
 * `12 00 01 01 06 4c 45 47 4f 20 4d 6f 76 65 20 48 75 62` - Name of the Hub. String `LEGO Move Hub` starts at offset 5
-* `09 00 01 03 06 40 01 00 10` - ?
+
+* `09 00 01 03 06 40 01 00 10` - Move Hub Firmware Version? App shows `1.0.00.0140`. 
 * `09 00 01 04 06 00 00 00 04` - ?
 * `06 00 01 07 06 00` - ?
 * `14 00 01 08 06 4c 45 47 4f 20 53 79 73 74 65 6d 20 41 2f 53` - Manufacturer. String `LEGO Systems A/S` starts at offset 5
