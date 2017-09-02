@@ -42,13 +42,13 @@
 
 * Byte 1? Protocol version? HiByte of message length? 
 
-* Byte 2 is the **message type**: 
-  * `0x01` device information
-  * `0x03` ?
-  * `0x04` port information
+* Byte 2 is the **message type**:
+  * `0x01` device information    
+  * `0x03` ?    
+  * `0x04` port information    
   * `0x45` sensor reading
-  * `0x47` ?
-  * `0x82` port changed
+  * `0x47` ?
+  * `0x82` port changed
   
 * On message type 0x04 and 0x82 Byte 3 is the **port number**:
   * `0x01` C
