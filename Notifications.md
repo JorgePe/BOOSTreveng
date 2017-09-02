@@ -44,9 +44,10 @@
 
 * Byte 2 is the **message type**:
   * `0x01` device information    
-  * `0x03` ?    
+  * `0x03` ? ping response
   * `0x04` port information    
-  * `0x45` sensor reading
+  * `0x05` error notification on malformed commands?
+  * `0x45` sensor reading
   * `0x47` subscription acknowledgements?
   * `0x82` port changed
   
