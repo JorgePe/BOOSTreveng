@@ -35,7 +35,7 @@ received:
 * Byte 1? Protocol version? HiByte of message length? 
 
 * Byte 2 is the message type: 
-  * `0x01` ?
+  * `0x01` device information
   * `0x03` ?
   * `0x04` port information
   * `0x45` sensor reading
