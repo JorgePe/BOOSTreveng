@@ -47,7 +47,7 @@
   * `0x03` ?    
   * `0x04` port information    
   * `0x45` sensor reading
-  * `0x47` ?
+  * `0x47` subscription acknowledgements?
   * `0x82` port changed
   
 * On message type 0x04 and 0x82 Byte 3 is the **port number**:
