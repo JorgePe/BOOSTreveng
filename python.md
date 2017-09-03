@@ -1,6 +1,6 @@
 # Using python with BT BLE
 
-Note 1: this guidelines are only for linux.
+Note 1: although this guidelines are mostly for linux, I added an example at the end that should works on other systems
 
 Note 2: we need a BLE compatible system. Please read [bash.md](https://github.com/JorgePe/BOOSTreveng/blob/master/bash.md)
 
