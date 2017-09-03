@@ -14,7 +14,9 @@ For the record, there are at least  two other libraries available:
 - [Ian Harvey bluepy](https://github.com/IanHarvey/bluepy).
 - [Christopher Peplin and others pygatt](https://github.com/peplin/pygatt)
 
-pygatt seems interesting because it also works outside Linux (but only with a smart BT BLE device).
+pygatt seems *very* interesting because it also works outside Linux (but only with a smart BT BLE device).
+Unfortunately it is slow in linux since it makes system calls to gatttool instead of using BlueZ API directly
+like pygattlib does.
 
 For a basic example, this is how we read the friendly name with python:
 
@@ -53,3 +55,27 @@ for all motors/sensors/RGB LED functions it's better to split it in several char
 
 So don't take anything for granted. Specially if written by me :)
 
+Now if you're using pygatt in l inux instead of pygattlib, here is the same example:
+
+```
+#!/usr/bin/env python3
+
+import pygatt
+adapter = pygatt.GATTToolBackend()
+
+try:
+    adapter.start()
+    device = adapter.connect('00:16:53:A4:CD:7E')
+    devicename = device.char_read_handle(0x07)
+    print(devicename.decode("utf-8"))
+    
+finally:
+    adapter.stop()
+
+```
+On non-linux systems, if you have a smart BT BLE device like the BLED112, just change the
+backend, using the BlueGiga instead of the GATTTool:
+
+```
+    adapter = pygatt.BGAPIBackend()
+```
