@@ -10,7 +10,11 @@ This library is also included in [Piotr Karulis pybluez](https://github.com/karu
 Both libraries are included in ev3dev so we can use a LEGO MINDSTORMS EV3 to communicate with BT BLE devices.
 Of course, a BT BLE compatible device is needed, there are several USB dongles available.
 
-For the record, there is at least another library available, [Ian Harvey bluepy](https://github.com/IanHarvey/bluepy).
+For the record, there are at least  two other libraries available:
+- [Ian Harvey bluepy](https://github.com/IanHarvey/bluepy).
+- [Christopher Peplin and others](https://github.com/peplin/pygatt)
+
+pygatt seems interesting because it also works outside Linux (but only with a smart BT BLE device).
 
 For a basic example, this is how we read the friendly name with python:
 
