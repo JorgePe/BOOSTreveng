@@ -12,7 +12,7 @@ Of course, a BT BLE compatible device is needed, there are several USB dongles a
 
 For the record, there are at least  two other libraries available:
 - [Ian Harvey bluepy](https://github.com/IanHarvey/bluepy).
-- [Christopher Peplin and others](https://github.com/peplin/pygatt)
+- [Christopher Peplin and others pygatt](https://github.com/peplin/pygatt)
 
 pygatt seems interesting because it also works outside Linux (but only with a smart BT BLE device).
 
