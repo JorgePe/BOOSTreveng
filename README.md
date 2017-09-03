@@ -33,8 +33,17 @@ Progress so far:
 - Button state reading
 - MIT App Inventor 2 released last month a new version of the [BLE extension](http://iot.appinventor.mit.edu/assets/resources/edu.mit.appinventor.ble.aix) with lots of new features... and it works!
 
+People:
+I was amazed by having people making questions and suggestions the very same day I started this project.
+Lately two github users joined in and gave a strong push, revising my confusing notes, testing on their own,
+starting their own projects and even also bringing their own BLE sniffers.
+- [Sebastian Raff](https://github.com/hobbyquaker)
+- [Helge Heß](https://github.com/helje5)
+
+I probably should add more names here but things are going too fast for me to keep up so please forgive me.
+
 Content:
-- unorganized details of what I've found
+- details of what we've found
 - a few bash scripts for Linux, even fewer python scripts also for Linux and one or two Android MIT AppInventor examples
 - some text files trying to explain how to use bash or python
 
