@@ -2,7 +2,7 @@
 
 The BOOST plug is a "Power Functions 2" plug like those introduced with the WeDo 2.0:
 
-![Power Functions 2 plug](https://flic.kr/p/K5jb75)
+[![Power Functions 2 plug](https://c1.staticflickr.com/9/8890/28272153016_3ea6cbabdf_b.jpg)](https://flic.kr/p/K5jb75)
 
 The plug has 6 pins.
 I consider pin 1 the left pin on that image (just to be sure, if we see the plug from front,
