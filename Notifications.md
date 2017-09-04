@@ -82,3 +82,15 @@
   * `0x0a` action finished
   
  
+
+# to categorize #
+after inserting WeDo 2.0 motor in port C:
+`0f 00 04 01 01 01 00 00 00 00 00 00 00 00 00`
+removing it:
+`05 00 04 01 00 `
+after inserting WeDo 2.0 motor in port D:
+`0f 00 04 02 01 01 00 00 00 00 00 00 00 00 00`
+removing it:
+`05 00 04 02 00`
+
+Of course, commands for BOOST motors do nothing with WeDo 2.0 motors
