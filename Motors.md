@@ -170,8 +170,9 @@ motor A+B 50% 0.1s (not sure, screen too small)
 68:01 = 360º (LSB + MSB)
 
 0c0081 M 11 09 T DT 647f03 = Turn motor M with duty cycle DT for T milliseconds 
-0c0081 M 11 0b DEG 0000 DT 647f03 = Rotate motor M DEG degrees with duty cycle DT
+0e0081 M 11 0b DEG 0000 DT 647f03 = Rotate motor M DEG degrees with duty cycle DT
 
+DEG:
 5A 00 = 90º
 B4 00 = 180º
 0E 01 = 270º
