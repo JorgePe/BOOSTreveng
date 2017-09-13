@@ -13,7 +13,7 @@ You should also see these other projects:
 - [boostanista](https://github.com/mithrendal/boostanista) - alternative remote for Lego Boost with Pythonista and iOS
 - [pyb00st](https://github.com/JorgePe/pyb00st) - my own attempt to create a python3 library
 - [node-red-contrib-movehub](https://flows.nodered.org/node/node-red-contrib-movehub) - Node-RED Nodes to control the Lego Boost Move Hub
-- [pylegoboost](https://github.com/undera/pylegoboost) - another python library
+- [pylgbst](https://github.com/undera/pylgbst) - another python library
 
 **DISCLAIMER:**
 
