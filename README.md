@@ -13,6 +13,7 @@ You should also see these other projects:
 - [boostanista](https://github.com/mithrendal/boostanista) - alternative remote for Lego Boost with Pythonista and iOS
 - [pyb00st](https://github.com/JorgePe/pyb00st) - my own attempt to create a python3 library
 - [node-red-contrib-movehub](https://flows.nodered.org/node/node-red-contrib-movehub) - Node-RED Nodes to control the Lego Boost Move Hub
+- [pylegoboost](https://github.com/undera/pylegoboost) - another python library
 
 **DISCLAIMER:**
 
@@ -39,6 +40,8 @@ Lately two github users joined in and gave a strong push, revising my confusing 
 starting their own projects and even also bringing their own BLE sniffers.
 - [Sebastian Raff](https://github.com/hobbyquaker)
 - [Helge Heß](https://github.com/helje5)
+
+They've created a [Slack group](https://join.slack.com/t/legoboost/shared_invite/MjMxNzYxMTIwNzM3LTE1MDM4MjU4NTEtNGQwNWQwNDk5NQ) where people can work together.
 
 I probably should add more names here but things are going too fast for me to keep up so please forgive me.
 
