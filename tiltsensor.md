@@ -35,7 +35,7 @@ Byte 8 - ??
 Byte 9 - changing it had no effect
 Byte 10 - ?? changing it to any value except 0 caused further attempts to read from sensor to give no result
 
-Byte 10 (last byte) toggles subscription, 0x01 enables it, 0x00 disables it.
+Byte 11 (last byte) toggles subscription, 0x01 enables it, 0x00 disables it.
 
 ## Notifications
 2nd one activates a mode like the WeDo 1/2 tilt sensors, only for two axis:

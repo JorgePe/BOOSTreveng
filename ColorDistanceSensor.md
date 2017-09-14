@@ -33,17 +33,21 @@ Notification handle = 0x000e value: 08 00 45 01 ff 0a ff 01
 ....
 ```
 
-## Activation command structure (`0a004101080100000001`):
+## Activation command structure (`0a00 4101 0801000000 01`):
 
 - 0x0a - message len
 - 0x00 - most likely packet format version
 - 0x41 - message type "subscribe to port"
 - 0x01 - port value C (port D is 0x02)
-- 0x08 - ??
+- 0x08 - sensor mode
 - 0x01 - ?? 
 - 0x00 - ??
 - 0x00 - ??
 - 0x01 - enable/disable subscription flag
+
+Sensor mode:
+- 0x00 - color only
+- 0x01 - integer distance only
 
 
 ## Data notification structure (`08 00 45 01 ff 0a ff 01`)
@@ -55,7 +59,7 @@ Data notification that arrives holds both color and distance values:
 - 45 - message type "sensor data from port"
 - 01 - port ID (C=0x01 and D=0x02)
 - 0a - color value (see explanation below)
-- 00 - distance in inches
+- 00 - distance in integer inches
 - ff - ??
 - 0a - partial inch distance - 1/x inch, works for last inch of distance
 
