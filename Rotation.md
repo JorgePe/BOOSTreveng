@@ -10,9 +10,8 @@ Interactive Motor on port D (color sensor on port C)
 sniffing session got this commands:
 
 ```
-0a:00:41:01:08:01:00:00:00:01 = distance sensor, don't know why it shows here because there was no block
-0a:00:41:02:01:01:00:00:00:01 -> delta? speed?
 0a:00:41:02:02:01:00:00:00:01 -> angle
+0a:00:41:02:01:01:00:00:00:01 -> speed
 08:00:42:02:01:00:20:10 -> unknown
 ```
 

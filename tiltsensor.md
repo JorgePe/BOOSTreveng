@@ -13,6 +13,29 @@ I used the 13th orange block to capture BLE communications, found 4 commands:
 
 Last one does nothing and the 3rd one activates something but got nothing.
 
+## Command Structure
+
+As usual, first byte is length and second byte is something like packet version, third is message type (0x41 is subscribe to sensor). Byte 4 is port - 0x3a is Tilt sensor port. 
+
+Byte 5 is tilt sensor mode:
+- 0x00 - 2 axis precise  
+- 0x01 - 2 axis simple (90º step)
+- 0x02 - 3 axis simple
+- 0x03 - bump detect mode - counts hard bumps
+- 0x04 - 3 axis precise
+- 0x05 - ?? accepted but does nothing?
+- 0x06 - ?? accepted but does nothing?
+- 0x07 - ?? accepted but does nothing?
+
+Bytes 6 and 7 is notification granularuty. The value seems to be degrees. Probably makes sense only for mode 0x00 and 0x04. Might have other meaning for other modes. 
+
+Byte 8 - ??
+Byte 9 - ?? changing it had no effect
+Byte 10 - ?? changing it to any value except 0 caused further attempts to read from sensor to give no result
+
+Byte 11 (last byte) toggles subscription, 0x01 enables it, 0x00 disables it.
+
+## Notifications
 2nd one activates a mode like the WeDo 1/2 tilt sensors, only for two axis:
 
 ```
@@ -48,6 +71,8 @@ Notification handle = 0x000e value: 05 00 45 3a 05
 Notification handle = 0x000e value: 05 00 45 3a 02 
 Notification handle = 0x000e value: 05 00 45 3a 00
 ```
+
+
 
 So only the last byte matters and just a few positions are detected:
 ```

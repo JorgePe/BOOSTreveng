@@ -1,7 +1,7 @@
 # Notifications from characteristic 00001624-1212-efde-1623-785feabcd123
 
 * `12 00 01 01 06 4c 45 47 4f 20 4d 6f 76 65 20 48 75 62` - Name of the Hub. String `LEGO Move Hub` starts at offset 5
-* `06 00 01 02 06 00` - ?
+* `06 00 01 02 06 00` - green push button state
 * `09 00 01 03 06 40 01 00 10` - Move Hub Firmware Version? App shows `1.0.00.0140`. 
 * `09 00 01 04 06 00 00 00 04` - ?
 * `06 00 01 05 06 d3` - ?
@@ -31,7 +31,7 @@
 * `0f 00 04 3b 01 15 00 02 00 00 00 02 00 00 00` - Port Info
 * `0f 00 04 3c 01 14 00 02 00 00 00 02 00 00 00` - Port Info
 
-* `0a 00 47 01 08 01 00 00 00 01` - ?
+* `0a 00 47 01 08 01 00 00 00 01` - port subscription acknowledgement
 
 * `05 00 82 37 01` - Motor A (0x37) starts movement
 * `05 00 82 37 0a` - Motor A (0x37) stops movement
@@ -44,16 +44,20 @@
 
 * Byte 2 is the **message type**:
   * `0x01` device information    
+  * `0x02` device shutdown - BTW sending this msg to device will cause it to shut down    
   * `0x03` ? ping response
   * `0x04` port information    
   * `0x05` error notification on malformed commands?
+  * `0x41` subscription
   * `0x45` sensor reading
-  * `0x47` subscription acknowledgements?
+  * `0x47` subscription acknowledgements
   * `0x82` port changed
   
 * On message type 0x04 and 0x82 Byte 3 is the **port number**:
   * `0x01` C
   * `0x02` D
+  * `0x14` ?? battery? subscribing gives power voltage-correlating values 
+  * `0x15` ??  
   * `0x32` LED
   * `0x37` A
   * `0x38` B
@@ -61,9 +65,21 @@
   * `0x3a` TILT SENSOR
 
 
+### Message type 0x01 device information
+
+You can send this commad to device to get some information from it.
+Command structure:
+- Byte 1 - cmd len
+- Byte 2 - packet version?
+- Byte 3 - information kind
+- Byte 4 - action (0x02 subscribe, 0x03 unsubscribe, 0x05 single instant get) 
+
 ### Message type 0x04 port information
 
+* Byte 4 is probably device kind 0x01=device, 0x02=group
+
 * Byte 5 is the device type:
+  * `0x17` LED
   * `0x25` DISTANCE/COLOR SENSOR
   * `0x26` IMOTOR
   * `0x27` MOTOR
@@ -71,7 +87,7 @@
   
 ### Message type 0x45 sensor reading  
 
-
+Depends on sensor type
 
 ### Message type 0x82 port changed 
 
