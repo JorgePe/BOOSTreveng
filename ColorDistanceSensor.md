@@ -33,7 +33,7 @@ Notification handle = 0x000e value: 08 00 45 01 ff 0a ff 01
 ....
 ```
 
-## Activation command structure (`0a00 4101 0801000000 01`):
+## Activation command structure (`0a00 4101 08 01000000 01`):
 
 - 0x0a - message len
 - 0x00 - most likely packet format version
@@ -41,7 +41,8 @@ Notification handle = 0x000e value: 08 00 45 01 ff 0a ff 01
 - 0x01 - port value C (port D is 0x02)
 - 0x08 - sensor mode
 - 0x01 - for mode 0x08 this is notification granularity (reports each n-th value)
-- 0x00 - ??
+- 0x00 - higher byte of granularity
+- 0x00 - ?? 
 - 0x00 - ??
 - 0x01 - enable/disable subscription flag
 
@@ -55,7 +56,7 @@ Sensor mode:
 - 0x06 - constantly streams some 3 values, each is 2-byte, seem to measure the distance, but not clear why 3 of them?
 - 0x07 - seems to turn sensor off
 - 0x08 - color and distance mode - the easiest one
-- 0x09 - lumonosity measurement mode 
+- 0x09 - lumonosity measurement mode (gives 1024 values from 0 to 1023)
 - 0x0a - gives single notification with some 20 bytes of data
 
 

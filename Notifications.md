@@ -44,6 +44,7 @@
 
 * Byte 2 is the **message type**:
   * `0x01` device information    
+  * `0x02` device shutdown    
   * `0x03` ? ping response
   * `0x04` port information    
   * `0x05` error notification on malformed commands?

@@ -27,12 +27,10 @@ Byte 5 is tilt sensor mode:
 - 0x06 - ?? accepted but does nothing?
 - 0x07 - ?? accepted but does nothing?
 
-Byte 6 is notification granularuty. The value seems to be degrees. Probably makes sense only for mode 0x00 and 0x04. Might have other meaning for other modes. 
-
-Byte 7 can be higher byte of granularity. 
+Bytes 6 and 7 is notification granularuty. The value seems to be degrees. Probably makes sense only for mode 0x00 and 0x04. Might have other meaning for other modes. 
 
 Byte 8 - ??
-Byte 9 - changing it had no effect
+Byte 9 - ?? changing it had no effect
 Byte 10 - ?? changing it to any value except 0 caused further attempts to read from sensor to give no result
 
 Byte 11 (last byte) toggles subscription, 0x01 enables it, 0x00 disables it.
