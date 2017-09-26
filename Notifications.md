@@ -76,9 +76,11 @@ Command structure:
 
 ### Message type 0x04 port information
 
-* Byte 4 is probably device kind 0x01=device, 0x02=group
+* Byte 4 is probably device kind 0x01=device, 0x02=group, 0x00 - no device (detached)
 
 * Byte 5 is the device type:
+  * `0x14` - power voltage ?
+  * `0x15` - circuit power (amperage) ?
   * `0x17` LED
   * `0x25` DISTANCE/COLOR SENSOR
   * `0x26` IMOTOR
@@ -96,6 +98,7 @@ Depends on sensor type
   * `0x01` action started
   * `0x05` conflict. New action received while other action is still running
   * `0x0a` action finished
+  * `0x0e` ??
   
  
 
