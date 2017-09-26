@@ -60,7 +60,7 @@ motor B 50% 0.2s
 1. packet length (`0xC`=12 for Time Value, `0xE` for Angle Value)
 2. ??? (maybe packet format version, usually 0x0, but seen samples w/ 0x1)
 3. packet type - `0x81` = `Set Port Value`
-4. port - motors are: A=`0x37`, B=`0x38`, A+B=`0x39`, D=`0x02`, D=`0x01`
+4. port - motors are: A=`0x37`, B=`0x38`, A+B=`0x39`, D=`0x02`, C=`0x01`
 
 Port `0x39` is special in that it addresses both, motor A and motor B.
 The group (and its child ports) is reported in the port registration 
