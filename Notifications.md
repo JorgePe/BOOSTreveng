@@ -46,10 +46,10 @@
   * `0x01` device information    
   * `0x02` device shutdown - BTW sending this msg to device will cause it to shut down    
   * `0x03` ? ping response
-  * `0x04` port information    
-  * `0x05` error notification on malformed commands?
+  * `0x04` port information
+  * `0x05` error notification on malformed commands?
   * `0x41` subscription
-  * `0x45` sensor reading
+  * `0x45` sensor reading
   * `0x47` subscription acknowledgements
   * `0x82` port changed
   
