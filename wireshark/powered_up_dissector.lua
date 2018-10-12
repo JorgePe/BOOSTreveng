@@ -66,7 +66,7 @@ local device_ids = {
 }
 
 local port_ids = {
-    [0x01] = "Port 0",
+    [0x00] = "Port 0",
     [0x01] = "Port 1",
     [0x02] = "Port 2",
     [0x03] = "Port 3",
