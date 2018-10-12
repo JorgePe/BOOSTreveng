@@ -56,26 +56,31 @@ local actions = {
     [0x03] = "Unsubscribe Value",
     [0x04] = "Set Default Value",
     [0x05] = "Get Value",
-    [0x06] ="Notification",
+    [0x06] = "Notification",
 }
 
 local device_ids = {
     [0x40] = "Move Hub",
-    [0x41] = "SmartHub Hub",
+    [0x41] = "Smart Hub",
     [0x42] = "Handset",
 }
 
 local port_ids = {
-    [0x01] = "Port C",
-    [0x02] = "Port D",
-    [0x03] = "Ports C and D",
-    [0x32] = "Built-in Status Light",
-    [0x37] = "Built-in Port A",
-    [0x38] = "Built-in Port B",
-    [0x39] = "Built-in Ports A and B",
-    [0x3A] = "Built-in Tilt Sensor",
-    [0x3B] = "Built-in Battery Voltage",
-    [0x3C] = "Built-in Battery Current",
+    [0x01] = "Port 0",
+    [0x01] = "Port 1",
+    [0x02] = "Port 2",
+    [0x03] = "Port 3",
+    [0x32] = "Port 50",
+    [0x33] = "Port 51",
+    [0x34] = "Port 52",
+    [0x35] = "Port 53",
+    [0x36] = "Port 54",
+    [0x37] = "Port 55",
+    [0x38] = "Port 56",
+    [0x39] = "Port 57",
+    [0x3A] = "Port 58",
+    [0x3B] = "Port 59",
+    [0x3C] = "Port 60",
 }
 
 local port_info_types = {
@@ -85,14 +90,27 @@ local port_info_types = {
 }
 
 local type_ids = {
+    [0x00] = "None",
+    [0x01] = "Medium Motor",
+    [0x02] = "Train Motor",
+    [0x08] = "Lights",
     [0x14] = "Hub Battery Voltage",
     [0x15] = "Hub Battery Current",
     [0x16] = "Hub Piezo Buzzer",
     [0x17] = "Hub Status Light",
-    [0x25] = "Color and Distance Sensor",
-    [0x26] = "Interactive Motor",
-    [0x27] = "Move Hub Built-in Motor",
-    [0x28] = "Move Hub Built-in Tilt Sensor",
+    [0x22] = "WeDo 2.0 Tilt Sensor",
+    [0x23] = "WeDo 2.0 Motion Sensor",
+    [0x24] = "WeDo 2.0 Generic Sensor",
+    [0x25] = "BOOST Color and Distance Sensor",
+    [0x26] = "BOOST Interactive Motor",
+    [0x27] = "BOOST Move Hub Built-in Motor",
+    [0x28] = "BOOST Move Hub Built-in Tilt Sensor",
+    [0x29] = "DUPLO Train Motor",
+    [0x30] = "DUPLO Train Piezo Buzzer",
+    [0x31] = "DUPLO Train Color Sensor",
+    [0x32] = "DUPLO Train Speed",
+    [0x37] = "Handset Button",
+    [0x38] = "Handset ?",
 }
 
 
