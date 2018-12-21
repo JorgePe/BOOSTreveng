@@ -67,4 +67,7 @@ Issues:
 
 I really don't understand why LEGO developers opted to put everything in just one handle. It forces us to send a long string even for simple commands, which increases latency. Using MIT App Inventor 2 (and probably other blockly languages like Scratch) with long commands gets difficult and clumsy.
 
-. 
+ 
+UPDATE:
+https://github.com/LEGO/lego-ble-wireless-protocol-docs
+LEGO released a detailed (but still draft) specification of the BLE specs (officially named LEGO Wireless Protocol, LWP)
